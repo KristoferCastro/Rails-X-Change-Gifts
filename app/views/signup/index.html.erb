@@ -1,0 +1,45 @@
+<%= form_for @santa, url: {action: "submit"}, html: {id:"signup-form"} do |f| %>
+  <div class="row">
+    <div class="small-8 columns">
+
+		<div class="row">
+			<div class = "small-12 small-offset-3 columns">
+				<h2>Sign a Santa</h2>
+			</div>
+		</div>
+    <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Name</label>
+        </div>
+        <div class="small-9 columns">
+          <input name = "name" type="text" id="right-label" placeholder="enter your name here"/>
+		
+        </div>
+
+      </div>
+
+	<div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Gift no.</label>
+        </div>
+        <div class="small-9 columns">
+          <input name="gift_number" type="text" id="right-label" placeholder="you will get your number after you register" disabled>
+        </div>
+    </div>
+
+	<div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Message</label>
+        </div>
+        <div class="small-9 columns">
+          <textarea name="message" type="textarea" id="right-label" placeholder="optional message"></textarea>
+        </div>
+    </div>
+	<div class="row">
+		<div class = "small-9 small-offset-3 columns">
+			<%= f.submit 'Enter', class: 'button expand'%>
+		</div>
+	</div>
+  </div>
+	</div>
+<% end %>

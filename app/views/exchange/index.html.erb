@@ -1,0 +1,42 @@
+<!--
+
+<% @participants.each do |person, gift| %>
+	<div>
+	<%= person.name %> gets gift number <%= gift.id%> from <%= Santa.find(gift.santa_id).name%>
+	</div>
+<% end %>
+-->
+
+<div class = "container gift-list">
+<ul class = "small-block-grid-3 medium-block-grid-6">
+<% @participants.each do |person, gift| %>
+	<li>
+		<div data-name = "<%= person.name %>"
+			data-message = "<%= gift.message %>" 
+			data-gift = "<%= gift.id %>" class = "gift-image small-4 small-centered columns">
+			<div class="gift-name"> <span><%= person.name %></span></div>
+				
+				<div class="gift-id hide"> <span><%= gift.id %><span> </div>
+		</div>
+	</li>
+<% end %>
+<ul>
+</div>
+
+<div class ="container divider">
+	<div class = "row ">
+		<div class = "small-9 small-centered next-announcer columns">
+		 	Well then... <span id = "next-announcer-name"></span>
+		</div>
+	</div>
+</div>
+
+<div class = "container gift-message">
+	<div class = "row">
+		<div class = "small-12 small-centered gift-message-row">
+			Someone go first! Just click on your name.
+		</div>
+	</div>
+</div>
+
+<%= audio_tag("audio.mp3", autoplay: true, loop: "loop", controls: true) %>

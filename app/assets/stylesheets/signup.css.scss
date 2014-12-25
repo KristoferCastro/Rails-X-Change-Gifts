@@ -1,0 +1,17 @@
+// Place all the styles related to the signup controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#signup-form{
+	margin-top:2em;
+}
+
+#signup-form .button{
+	background-color: #75BE51 !important;
+}
+
+#signup-form h2{
+	font-family: lato-light;
+	font-size: 3em;
+	margin-bottom: 1em;
+}

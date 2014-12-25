@@ -1,0 +1,78 @@
+// Place all the styles related to the exchange controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.gift-image{
+	background-image: url("gift_icon.jpg");
+	background-size: cover;
+	height:80px;
+	width:80px;
+	line-height:100px;
+	text-align:center;
+}
+
+.gift-id span{
+	font-family: 'lato-bold';
+	font-size: 1em !important;
+	color: #98FF65 !important;
+	z-index : 2;
+	position:relative;
+	top:-115px;
+}
+
+.gift-name{
+	width:120px;
+	margin-left:-73%;
+	
+}
+
+.gift-image:hover{
+	cursor: pointer;
+}
+
+.hide{
+	display: none;
+	visibility: hidden;
+}
+
+.gift-name{
+	z-index: 1;
+}
+
+.gift-image span{
+	font-family: 'lato-semibold';
+	font-size:0.75em;
+	color: white;
+}
+
+.gift-list{
+	margin: 2em;
+}
+
+.divider{
+	background-color:black;
+	height:75px;
+}
+
+.gift-message{
+	background-color: #75BE51;
+	min-height:100%;
+}
+
+.next-announcer{
+	font-family: 'lato-bold';
+	font-size: 2em;
+	color: #85AC51;
+	text-align: center;
+	line-height:2em;
+}
+
+.gift-message-row{
+	margin-top: 2em;
+	font-family: 'lato-light';
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
+	-webkit-animation: messageAnim 2s infinite;
+}
+

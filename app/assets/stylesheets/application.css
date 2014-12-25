@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation_and_overrides
+
+ *= require_tree .
+ */
+
+
+body{
+	background-image: url('background.jpg');
+	background-size: 15%;
+}
+
+header h1{
+	font-family: lato-bold;
+	color: #75BE51;
+	text-align: center;
+
+}
+
+h1 span{
+	color: #FF6362;
+}
+
+.alert-success{
+	font-family: lato-bold;
+	color: white;
+	text-align: center;
+	opacity:100%;
+	margin-top: 1.5em;
+	visibility: hidden;
+	animation: firstAlert 4s;
+	-webkit-animation: firstAlert 4s;
+}
+
+.alert-gift{
+	font-family: lato-bold;
+	color: white;
+	font-size:1.5em;
+	background-color:#75BE51;
+	text-align: center;
+	opacity:100%;
+	margin-top: 1em;
+	visibility: hidden;
+	animation: firstAlert 10s;
+	-webkit-animation: firstAlert 10s;
+}
+
+.alert-gift span{
+	font-size: lato-bold;
+	font-size:2em;
+	padding: 0.5em;
+	margin-left: 0.5em;
+	color: white;
+	background-color: #75BE51;
+	animation: secondAlert 10s;
+	-webkit-animation: secondAlert 10s;
+}
+
+@-webkit-keyframes firstAlert{
+	from {
+		background-color: #75BE51;
+		visibility: visible;
+		}
+	to{
+		background-color: white;
+		visibility: hidden;
+		}
+}
+
+@-webkit-keyframes secondAlert{
+	from {
+		background-color: #FF6362;
+		padding: 0.5em;
+		visibility: visible;
+		}
+	to{
+		background-color: white;
+		visibility: hidden;
+		}
+}
+
+.alert-error {
+	font-family: lato-bold;
+	background-color: #FF6362;
+	color:white;
+	text-align: center;
+	opacity:100%;
+	margin-top: 1.5em;
+}
+

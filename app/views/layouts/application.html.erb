@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "XChange" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+	<div class="container navigation">
+				<nav class="top-bar" data-topbar>
+					<ul class="title-area">
+						<li class="name">
+							<h1><a href="signup">
+								<header>
+									<h1> My Secret <span>Santa </span></h1>
+								</header>
+							</a></h1>
+						</li>
+						<li class="toggle-topbar menu-icon"><a 
+							href="#"><span>Menu</span></a></li>
+					</ul>	
+
+					<section class="top-bar-section">
+					
+						<ul class="left">
+							<li><a href="/signup">Add Person</a></li>
+							<!--<li><a href="/main/index">Men</a></li>
+							<li><a href="/main/index">Start</a></li>-->
+							<li><a href="/exchange">Start Exchange</a></li>
+							
+						</ul>
+	
+					</section>	
+				</nav>	
+	</div>
+	
+	<div class="container">
+		
+		<% flash.each do |key, value| %>
+	
+			<div class ="alert alert-<%= key %>">
+				 Please label your gift:<span>#
+				 <%= value %> 
+				</span>
+		   </div>
+		<% end%>
+	</div>
+	
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
