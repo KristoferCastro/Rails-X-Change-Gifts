@@ -40,6 +40,7 @@ h1 span{
 	visibility: hidden;
 	animation: firstAlert 4s;
 	-webkit-animation: firstAlert 4s;
+	-moz-animation: firstAlert 4s;
 }
 
 .alert-gift{
@@ -53,6 +54,7 @@ h1 span{
 	visibility: hidden;
 	animation: firstAlert 10s;
 	-webkit-animation: firstAlert 10s;
+	-moz-animation: firstAlert 10s;
 }
 
 .alert-gift span{
@@ -64,9 +66,34 @@ h1 span{
 	background-color: #75BE51;
 	animation: secondAlert 10s;
 	-webkit-animation: secondAlert 10s;
+	-moz-animation: secondAlert 10s;
 }
 
 @-webkit-keyframes firstAlert{
+	from {
+		background-color: #75BE51;
+		visibility: visible;
+		}
+	to{
+		background-color: white;
+		visibility: hidden;
+		}
+}
+
+
+@-moz-keyframes firstAlert{
+	from {
+		background-color: #75BE51;
+		visibility: visible;
+		}
+	to{
+		background-color: white;
+		visibility: hidden;
+		}
+}
+
+
+@keyframes firstAlert{
 	from {
 		background-color: #75BE51;
 		visibility: visible;
@@ -89,6 +116,31 @@ h1 span{
 		}
 }
 
+@keyframes secondAlert{
+	from {
+		background-color: #FF6362;
+		padding: 0.5em;
+		visibility: visible;
+		}
+	to{
+		background-color: white;
+		visibility: hidden;
+		}
+}
+
+
+@-moz-keyframes secondAlert{
+	from {
+		background-color: #FF6362;
+		padding: 0.5em;
+		visibility: visible;
+		}
+	to{
+		background-color: white;
+		visibility: hidden;
+		}
+
+}
 .alert-error {
 	font-family: lato-bold;
 	background-color: #FF6362;

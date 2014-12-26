@@ -45,9 +45,16 @@
 		<% flash.each do |key, value| %>
 	
 			<div class ="alert alert-<%= key %>">
-				 Please label your gift:<span>#
-				 <%= value %> 
+				<% if key != :error %>
+				 Please label your gift:
+			
+				<span>#
+					 <%= value %> 
 				</span>
+				<% else %>
+					<%= value %>
+				<% end %>
+
 		   </div>
 		<% end%>
 	</div>
