@@ -1,4 +1,4 @@
-ecret Santa Gift Exchange Web App
+Secret Santa Gift Exchange Web App
 ==============================================
 
 This is a small project that can help you in the following use case
